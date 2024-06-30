@@ -9,7 +9,7 @@ from tensorflow.keras.layers import (
 
 class CNNModel:
     """
-    A class representing a Convolutional Neural Network (CNN) model for human emotion detection.
+    A class representing a Convolutional Neural Network (CNN) model for human emotion detection
 
     Attributes:
         max_len (int): The maximum length of input sequences.
