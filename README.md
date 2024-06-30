@@ -11,4 +11,4 @@ Usage: Refer to README.md in the folder for detailed information on how to use a
 
 #### Acknowledgments
 This project was inspired by the need for effective sentiment analysis solutions.
-Special thanks to one contributor: @Kasyfil97.
+Special thanks to one contributor: [Kasyfil97](https://github.com/Kasyfil97).
