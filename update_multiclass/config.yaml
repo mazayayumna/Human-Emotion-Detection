@@ -14,3 +14,10 @@ verbose: 1
 validation_split: 0.2
 tokenizer_path: tokenizer/tokenizer.pkl
 model_path: models/model.h5
+class_dict:
+  0: 'sadness'
+  1: 'joy'
+  2: 'love'
+  3: 'anger'
+  4: 'fear'
+  5: 'surprise'
