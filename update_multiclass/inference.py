@@ -16,7 +16,7 @@ def load_data(config):
     model = load_model(config['model_path'])
     return tokenizer, model
 
-def predict(sentence: str, tokenizer, model, maxlen: int):
+def predict(sentence: str, tokenizer, model, config: dict):
     
     # Load dataset
     input_df = pd.DataFrame({'text': [sentence]}, index=[0])
@@ -27,13 +27,14 @@ def predict(sentence: str, tokenizer, model, maxlen: int):
 
     # tokenizing and padding
     instance = tokenizer.texts_to_sequences(instance['preprocessed'])
-    instance = pad_sequences(instance, padding='post', maxlen=maxlen)
+    instance = pad_sequences(instance, padding='post', maxlen=config['max_length'])
     pred = model.predict(np.array(instance))
 
     # Find class with max probability
     max_prob_index = np.argmax(pred[0])
+    pred_class = config['class_dict'][max_prob_index]
 
-    return max_prob_index
+    return pred_class
 
 
 if __name__ == "__main__":
@@ -42,4 +43,4 @@ if __name__ == "__main__":
 
     tokenizer, model = load_data(config)
     query = input('Enter a sentence: ')
-    pprint.pprint({'query': query, 'pred': predict(query, tokenizer, model, config['max_length'])})
+    pprint.pprint({'query': query, 'pred': predict(query, tokenizer, model, config)})
