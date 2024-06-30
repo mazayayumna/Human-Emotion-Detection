@@ -73,11 +73,7 @@ def main(config: dict):
     #save model
     model.save(config['model_path'])
 
-    # Evaluate model
-    print('begin evaluation')
-    test_data = emosi[-config['test_size']:]
-    score_test = model.evaluate(test_data['text'], test_data['label'], verbose=1)
-    print(score_test)
+    # Evaluate model: to evaluate model, run evaluate.py.
 
 if __name__ == '__main__':
     config = Config()
