@@ -74,6 +74,7 @@ def main(config: dict):
     model.save(config['model_path'])
 
     # Evaluate model: to evaluate model, run evaluate.py.
+    # for testing, run inference.py, type sentence that we want (ex: "I love my family so much")
 
 if __name__ == '__main__':
     config = Config()
