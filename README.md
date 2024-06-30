@@ -6,7 +6,7 @@ Description: This script implements a CNN-based model for sentiment analysis wit
 Usage: Run emosi_manusia_nlp_cnn.py to train and evaluate the sentiment analysis model with Jupyter Notebook.
 
 ### 2. update_multiclass/main.py
-Description: This script implements a CNN-based model for sentiment analysis with multiclass output (sadness, joy, love, anger, fear, an surprise). It is developed as a standalone Python script and does not require Jupyter Notebook. <br />
+Description: This script implements a CNN-based model for sentiment analysis with multiclass output (sadness, joy, love, anger, fear, and surprise). It is developed as a standalone Python script and does not require Jupyter Notebook. <br />
 Usage: Refer to README.md in the folder for detailed information on how to use and adapt the script for your specific dataset and requirements.
 
 #### Acknowledgments
